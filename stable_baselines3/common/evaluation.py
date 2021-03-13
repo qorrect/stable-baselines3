@@ -65,7 +65,7 @@ def evaluate_policy(
         is_action_masked = is_vecenv_wrapped(env, VecActionMasker)
     else:
         is_monitor_wrapped = is_wrapped(env, Monitor)
-        is_action_masked = is_wrapped(ActionMasker)
+        is_action_masked = is_wrapped(env,ActionMasker)
 
     if not is_monitor_wrapped and warn:
         warnings.warn(
